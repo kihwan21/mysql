@@ -33,8 +33,8 @@
 		echo "DB Server connect<br>";
 
 
-	#select ex
-	$Select = "SELECT * FROM test ";
+	#select문 ex
+	$Select = "SELECT * FROM test ";   # 쿼리문 부분 셀렉트 부분 
 	$result = mysqli_query($db_server, $Select);
 	while($board = $result->fetch_array())
 	{
@@ -59,5 +59,18 @@
 		</tbody>	
 END;
 	}
+	#insert문 ex
+	$Insert = "INSERT INTO test (
+		user_num, user_id, user_pw, user_phone, user_date, gender, email) VALUES (
+			'id_test3', 'enter', '010-3333-4444','2020-01-01','남','dkdk@gmail.com')";     
+	)
+	$result = mysqli_query($db_server, $Insert);
+	if($result == FALSE){
+		echo mysqli_error($db_server);
+	}
+
 ?>
 
+		</table>
+	</body>
+<html>
