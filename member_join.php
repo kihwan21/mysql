@@ -5,7 +5,7 @@
     </head>
     <body>
         <!--form tag -->
-        <form action = "/content/join_query.php" method = "post">  
+        <form action = "/join_query.php" method = "post">  
             아이디<br><input type="text" name="id"></input><br>
             비밀번호<br><input type="text" name="pw"></input><br>
             비밀번호 재확인<br><input type="text" name="r_pw"></input><br>
