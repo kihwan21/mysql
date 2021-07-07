@@ -33,4 +33,5 @@
 	if($result == FALSE){
 		echo mysqli_error($db_server);
 	}
+  header('Location:/member_join.php');  #다시 돌아오는거 
 ?>
