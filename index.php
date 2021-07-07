@@ -21,7 +21,7 @@
 	# login.php 또는 db.php 
 	$db_hostname = '127.0.0.1';   #102.168.126.78 방화벽 
 	#$db_hostname = '192.168.31.41';
-	$db_database = 'web_test';  //DB 이름 확인
+	$db_database = 'new_test';  //DB 이름 확인
 	$db_username = 'kihwan';  # 사용자 아이디
 	$db_password = '2021';    # 사용자 패스워드
 
@@ -34,7 +34,7 @@
 
 
 	#select ex
-	$Select = "SELECT + FROM member ";
+	$Select = "SELECT * FROM test ";
 	$result = mysqli_query($db_server, $Select);
 	while($board = $result->fetch_array())
 	{
@@ -45,7 +45,7 @@
 		$user_date = $board['user_date'];
 		$gender = $board['gender'];
 		$email = $board['email'];
-		echo <<<END	
+		echo <<<END
 		<tbody>
 			<tr>
 				<td width="100">$user_num</td>
@@ -59,8 +59,5 @@
 		</tbody>	
 END;
 	}
-
-
-
 ?>
 
